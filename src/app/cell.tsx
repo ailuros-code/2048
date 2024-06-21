@@ -1,4 +1,4 @@
-var cellId = 0;
+let cellId = 0;
 
 export class Cell {
 	x: number = 0;

@@ -1,6 +1,6 @@
 import {Cell} from "@/app/cell";
 import styles from "@/app/styles.module.css";
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 
 export function VisualCell(props: { cell: Cell }) {
 	// border: 3px solid #aa005555;background: #ff0000aa;

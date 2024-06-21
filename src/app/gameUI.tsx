@@ -77,7 +77,7 @@ export function GameUI(props: {
 
 	function spawn(tempCells: Cell[]): Cell[] {
 		let emptySpaces = props.size * props.size - cells.length;
-		// Ensure we dont try to spawn more cells than there are empty spaces
+		// Ensure we don't try to spawn more cells than there are empty spaces
 		let n = Math.floor(Math.random() * props.size * 0.25) + 1;
 		if (n > emptySpaces) n = emptySpaces;
 		let freeSpaces = Array(props.size * props.size).fill(0).map((_, i) => i).filter(i => !tempCells.some(cell => cell.x + cell.y * props.size === i));
@@ -87,7 +87,7 @@ export function GameUI(props: {
 			let x = index % props.size;
 			let y = Math.floor(index / props.size);
 			// Spawn 2 4 or 8
-			const gameLevel = Math.log2(cells.map(c => c.value).reduce((a, b) => Math.min(a, b), 0));
+			// const gameLevel = Math.log2(cells.map(c => c.value).reduce((a, b) => Math.min(a, b), 0));
 			const value = Math.round(2 ** (([1, 2, 3][Math.floor(Math.random() * 3)])));
 			tempCells.push(new Cell(x, y, value));
 		}

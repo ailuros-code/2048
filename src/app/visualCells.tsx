@@ -26,7 +26,7 @@ export function VisualCells(props: {
 				visualElement.style.height = height + "px";
 			}
 		}
-	}, [props.cells, props.positionCellContainerRef, props.visualCellContainerRef, props.size, ids, idCellMap])
+	}, [props.positionCellContainerRef, props.visualCellContainerRef, props.size, ids, idCellMap])
 
 
 	useEffect(() => {
